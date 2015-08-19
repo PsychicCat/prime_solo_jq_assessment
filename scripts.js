@@ -26,6 +26,8 @@ $(document).ready(function(){
 	//when Remove is clicked do this
 	$div.on('click', '.js-remove', function(e){
 		$(this).parent().remove();
+		//reset counter to zero
+		$counter = 0;
 		e.preventDefault();
 	});
 

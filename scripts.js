@@ -18,17 +18,14 @@ $(document).ready(function(){
 	});
 
 	//when Change color is clicked do this
-	$div.on('click', '.js-change-color', function(e){
-		$div.toggleClass('change-color');
-		e.preventDefault();
+	$('body').on('click', '.js-change-color', function(){
+		$(this).parent().toggleClass('change-color');
 	});
 
 	//when Remove is clicked do this
-	$div.on('click', '.js-remove', function(e){
-		$(this).parent().remove();
-		//reset counter to zero
+	$('body').on('click', '.js-remove', function(){
 		$counter = 0;
-		e.preventDefault();
+		$(this).parent().remove();
 	});
 
 });
